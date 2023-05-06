@@ -3,3 +3,4 @@ bitsandbytes
 torch==1.13.1
 git+https://github.com/huggingface/peft.git
 accelerate
+wandb
