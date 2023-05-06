@@ -5,7 +5,7 @@ This folder is supposed to be a simple, minimal example of how to use huggingfac
 
 Parameter efficient fine tuning methods are a series of techniques that allow us to finetune a model without needing to finetune all of the models parameters. By finetuning just a subset of the model's parameters we greatly reduce the computational costs for training otherwise large scale models
 
-In this repos we demonstrate using LoRA [Low Rank Adapation of Large Language Models](https://arxiv.org/abs/2106.09685) on the 3B parameter RedPajama Instruct Model. 
+In this repo we demonstrate using LoRA [Low Rank Adapation of Large Language Models](https://arxiv.org/abs/2106.09685) on the 3B parameter RedPajama Instruct Model. 
 
 
 
