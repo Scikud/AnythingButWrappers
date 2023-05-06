@@ -37,7 +37,7 @@ class TrainerConfig:
     eval_data_path: str = "data/eval.jsonl"
     output_dir = "outputs/"
     pretrained_model_path ="togethercomputer/RedPajama-INCITE-Base-3B-v1"
-    use_wandb : bool = False
+    use_wandb : bool = True
     wandb_project : str = 'AnythingButWrappersExamples'
     wandb_name : str = 'RedPajama-LoRA-Training'
 
@@ -113,7 +113,6 @@ def train(config):
     model.print_trainable_parameters()
 
     # Create the trainer    
-    train_dataset.select(range(500))
 
     tokenizer.pad_token_id = 0  
     trainer = CustomCheckpointTrainer(
