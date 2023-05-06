@@ -5,7 +5,9 @@ from transformers import AutoTokenizer
 from dataclasses import dataclass
 import transformers
 import torch
+
 IGNORE_INDEX = -100
+DEFAULT_PAD_TOKEN = "[PAD]"
 
 def _tokenize_fn(strings: Sequence[str],
                  tokenizer) -> List[torch.Tensor]:
