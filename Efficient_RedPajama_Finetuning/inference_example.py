@@ -27,6 +27,6 @@ def run_inference(trained_model_folder):
 
 
 if __name__ == "__main__":
-    run_inference("/workspace/AnythingButWrappers/Efficient_RedPajama_Finetuning/outputs/checkpoint-100")
+    run_inference("./outputs/checkpoint-100")
 
 
