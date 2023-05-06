@@ -17,15 +17,14 @@ from utils import smart_tokenizer_and_embedding_resize, make_supervised_data_mod
 import os
 os.environ["TOKENIZERS_PARALLELISM"] = "true"
 
-
-## This dataclass is used to store the configuration for the trainer.
-## Feel Free to change this or add more parameters as you see fit! 
+### FEEL FREE TO CHANGE THIS OR ADD MORE PARAMETERS AS YOU SEE FIT!
+### This dataclass is used to store the configuration for the trainer.
 @dataclass
 class TrainerConfig:
     batch_size: int = 12
     micro_batch_size: int = 3
-    lora_r: int = 8
-    lora_alpha: int = 16
+    lora_r: int = 8  #  This controls the rank of the matrices used in LoRA
+    lora_alpha: int = 16 # Hyperparameter for LoRA training
     lora_dropout: float = 0.05
     warmup_steps: int = 5
     learning_rate: float = 3e-4
