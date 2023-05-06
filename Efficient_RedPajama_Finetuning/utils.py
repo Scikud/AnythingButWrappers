@@ -1,8 +1,3 @@
-IGNORE_INDEX = -100
-DEFAULT_PAD_TOKEN = "[PAD]"
-DEFAULT_EOS_TOKEN = "</s>"
-DEFAULT_BOS_TOKEN = "<s>"
-DEFAULT_UNK_TOKEN = "<unk>"
 import json
 from typing import Sequence, Dict, List, Any
 from torch.utils.data import Dataset
@@ -10,8 +5,7 @@ from transformers import AutoTokenizer
 from dataclasses import dataclass
 import transformers
 import torch
-import pdb
-
+IGNORE_INDEX = -100
 
 def _tokenize_fn(strings: Sequence[str],
                  tokenizer) -> List[torch.Tensor]:
@@ -160,13 +154,13 @@ def smart_tokenizer_and_embedding_resize(
         output_embeddings[-num_new_tokens:] = output_embeddings_avg
 
 
-def main():
-    tokenizer = AutoTokenizer.from_pretrained("togethercomputer/RedPajama-INCITE-Base-3B-v1")
-    pdb.set_trace()
-    data_path = '/workspace/AnythingButWrappers/Efficient_RedPajama_Finetuning/data.jsonl'
-    SupervisedDataset(data_path, tokenizer, debug=True)
+# def main():
+#     tokenizer = AutoTokenizer.from_pretrained("togethercomputer/RedPajama-INCITE-Base-3B-v1")
+#     pdb.set_trace()
+#     data_path = '/workspace/AnythingButWrappers/Efficient_RedPajama_Finetuning/data.jsonl'
+#     SupervisedDataset(data_path, tokenizer, debug=True)
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
 
 
