@@ -1,6 +1,6 @@
 # Parameter Efficient Finetuning Example
 
-This folder is supposed to be a simple, minimal example of how to use huggingface's Parameter Efficient Fine Tuning [(PEFT)](https://github.com/huggingface/peft) library to finetune the recently released [RedPanda](https://www.together.xyz/blog/redpajama-models-v1) Model. 
+This folder is supposed to be a simple, minimal example of how to use huggingface's Parameter Efficient Fine Tuning [(PEFT)](https://github.com/huggingface/peft) library to finetune the recently released [RedPajama](https://www.together.xyz/blog/redpajama-models-v1) Model.
 
 
 Parameter efficient fine tuning methods are a series of techniques that allow us to finetune a model without needing to finetune all of the models parameters. By finetuning just a subset of the model's parameters we greatly reduce the computational costs for training otherwise large scale models
