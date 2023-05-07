@@ -28,7 +28,7 @@ def preprocess_paths(sources: Sequence[Dict[str, Any]],
     """Preprocess paths for training."""
     input_ids, targets = [], []
 
-    prefix = "Answer the following question: "
+    prefix = "Define the following expression: "
     tokenized_prefix = tokenizer(prefix, return_tensors="pt").input_ids[0]
     query_strings =  [source["input"] for source in sources]
     answer_strings = [source["output"] for source in sources]
